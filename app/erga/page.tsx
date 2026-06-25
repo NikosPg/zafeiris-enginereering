@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { PageHero } from "@/components/PageHero";
+import { Gallery } from "@/components/Gallery";
 import { services } from "@/lib/content";
 
 export const metadata: Metadata = {
@@ -19,6 +20,13 @@ export default function ProjectsPage() {
       />
 
       <section className="mx-auto max-w-6xl px-4 py-16">
+        <Gallery />
+      </section>
+
+      <section className="mx-auto max-w-6xl px-4 pb-16">
+        <h2 className="mb-8 text-2xl font-bold text-slate-900">
+          Έργα ανά κατηγορία
+        </h2>
         <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
           {categories.map((s) => (
             <div

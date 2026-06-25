@@ -10,12 +10,15 @@ export function Header() {
   return (
     <header className="sticky top-0 z-50 border-b border-slate-200 bg-white/95 backdrop-blur">
       <div className="mx-auto flex max-w-6xl items-center justify-between px-4 py-4">
-        <Link href="/" className="flex flex-col leading-tight">
-          <span className="text-lg font-bold tracking-tight text-brand-700">
-            {site.name}
-          </span>
-          <span className="text-xs uppercase tracking-widest text-slate-500">
-            {site.tagline}
+        <Link href="/" className="flex items-center gap-3">
+          {/* eslint-disable-next-line @next/next/no-img-element */}
+          <img
+            src="/images/logo.jpg"
+            alt={`${site.name} — ${site.tagline}`}
+            className="h-11 w-auto"
+          />
+          <span className="sr-only">
+            {site.name} {site.tagline}
           </span>
         </Link>
 

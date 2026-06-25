@@ -6,6 +6,12 @@ export function Footer() {
     <footer className="mt-20 bg-slate-900 text-slate-300">
       <div className="mx-auto grid max-w-6xl gap-10 px-4 py-14 sm:grid-cols-2 lg:grid-cols-3">
         <div>
+          {/* eslint-disable-next-line @next/next/no-img-element */}
+          <img
+            src="/images/logo.jpg"
+            alt={site.name}
+            className="mb-4 h-12 w-auto rounded bg-white p-1.5"
+          />
           <h3 className="text-lg font-bold text-white">{site.name}</h3>
           <p className="mt-1 text-sm uppercase tracking-widest text-slate-400">
             {site.tagline}

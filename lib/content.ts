@@ -153,6 +153,45 @@ export const services: Service[] = [
   },
 ];
 
+export type GalleryItem = {
+  src: string;
+  title: string;
+  category: string;
+};
+
+export const gallery: GalleryItem[] = [
+  {
+    src: "/images/pea-1.jpg",
+    title: "Όψη για ΠΕΑ – Επαγγελματικός Χώρος",
+    category: "Πιστοποιητικά Ενεργειακής Απόδοσης",
+  },
+  {
+    src: "/images/pea-2.jpg",
+    title: "Όψη για ΠΕΑ – Επαγγελματικός Χώρος",
+    category: "Πιστοποιητικά Ενεργειακής Απόδοσης",
+  },
+  {
+    src: "/images/pea-3.jpg",
+    title: "Όψη για ΠΕΑ – Επαγγελματικός Χώρος",
+    category: "Πιστοποιητικά Ενεργειακής Απόδοσης",
+  },
+  {
+    src: "/images/work-construction.jpg",
+    title: "Οικοδομικές εργασίες",
+    category: "Ανακαινίσεις – Κατασκευές",
+  },
+  {
+    src: "/images/proj-1.jpg",
+    title: "Έργο",
+    category: "Οικοδομικές Άδειες",
+  },
+  {
+    src: "/images/proj-8259.jpeg",
+    title: "Έργο",
+    category: "Οικοδομικές Άδειες",
+  },
+];
+
 export const news = {
   title: "Ανανέωση",
   date: "13/03/2017",

@@ -1,12 +1,20 @@
 import Link from "next/link";
 import { site, contact, services, profile, news } from "@/lib/content";
+import { Gallery } from "@/components/Gallery";
 
 export default function HomePage() {
   return (
     <>
       {/* Hero */}
-      <section className="relative overflow-hidden bg-gradient-to-br from-brand-700 via-brand-700 to-brand-900 text-white">
-        <div className="mx-auto max-w-6xl px-4 py-24 sm:py-32">
+      <section className="relative overflow-hidden text-white">
+        <img
+          src="/images/slider.jpg"
+          alt=""
+          aria-hidden="true"
+          className="absolute inset-0 h-full w-full object-cover"
+        />
+        <div className="absolute inset-0 bg-gradient-to-br from-brand-900/90 via-brand-800/85 to-brand-900/80" />
+        <div className="relative mx-auto max-w-6xl px-4 py-24 sm:py-32">
           <p className="text-sm font-semibold uppercase tracking-widest text-brand-100">
             {site.tagline} · {contact.area}
           </p>
@@ -106,6 +114,27 @@ export default function HomePage() {
             </ul>
           </div>
         </div>
+      </section>
+
+      {/* Gallery / latest works */}
+      <section className="mx-auto max-w-6xl px-4 py-20">
+        <div className="mb-12 flex flex-wrap items-end justify-between gap-4">
+          <div>
+            <p className="text-sm font-semibold uppercase tracking-widest text-brand-600">
+              Δουλειές μας
+            </p>
+            <h2 className="mt-1 text-3xl font-bold tracking-tight text-slate-900">
+              Τελευταία Έργα
+            </h2>
+          </div>
+          <Link
+            href="/erga"
+            className="text-sm font-semibold text-brand-600 hover:underline"
+          >
+            Όλα τα έργα →
+          </Link>
+        </div>
+        <Gallery />
       </section>
 
       {/* News + Contact CTA */}
