@@ -21,6 +21,12 @@ export const contact = {
   mapsQuery: "Φιλιππουπόλεως 4, Σεπόλια, Αθήνα",
 };
 
+// Web3Forms access key — ορίζεται ως env var NEXT_PUBLIC_WEB3FORMS_ACCESS_KEY
+// (στο Cloudflare Pages: Settings → Environment variables). Το key δεν είναι
+// μυστικό· χρησιμοποιείται από τον browser.
+export const web3formsKey =
+  process.env.NEXT_PUBLIC_WEB3FORMS_ACCESS_KEY || "";
+
 export const nav = [
   { label: "Αρχική", href: "/" },
   { label: "Προφίλ", href: "/profil" },
