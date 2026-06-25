@@ -46,6 +46,11 @@ export function Footer() {
                 ☎ {contact.phone}
               </a>
             </li>
+            <li>
+              <a href={contact.emailHref} className="hover:text-white">
+                ✉ {contact.email}
+              </a>
+            </li>
             <li>📍 {contact.address}</li>
             <li>
               <a

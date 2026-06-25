@@ -40,6 +40,20 @@ export default function ContactPage() {
                 </div>
               </li>
               <li className="flex items-start gap-4">
+                <span className="text-2xl">✉</span>
+                <div>
+                  <p className="text-sm font-semibold uppercase tracking-wider text-slate-500">
+                    Email
+                  </p>
+                  <a
+                    href={contact.emailHref}
+                    className="text-lg font-bold text-brand-700 hover:underline"
+                  >
+                    {contact.email}
+                  </a>
+                </div>
+              </li>
+              <li className="flex items-start gap-4">
                 <span className="text-2xl">📍</span>
                 <div>
                   <p className="text-sm font-semibold uppercase tracking-wider text-slate-500">

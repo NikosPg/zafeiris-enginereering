@@ -12,6 +12,8 @@ export const site = {
 export const contact = {
   phone: "215 5106146",
   phoneHref: "tel:+302155106146",
+  email: "anaszafeiris@teemail.gr",
+  emailHref: "mailto:anaszafeiris@teemail.gr",
   address: "Φιλιππουπόλεως 4, Σεπόλια, Αθήνα",
   area: "Σεπόλια, Αθήνα",
   facebook:

@@ -9,9 +9,14 @@ export function ContactForm() {
   if (sent) {
     return (
       <div className="mt-6 rounded-xl border border-green-200 bg-green-50 p-6 text-green-800">
-        <p className="font-semibold">Ευχαριστούμε για το μήνυμά σας!</p>
+        <p className="font-semibold">Ευχαριστούμε!</p>
         <p className="mt-1 text-sm">
-          Θα επικοινωνήσουμε μαζί σας σύντομα. Για άμεση εξυπηρέτηση καλέστε{" "}
+          Άνοιξε η εφαρμογή email σας για να ολοκληρώσετε την αποστολή. Αν δεν
+          άνοιξε, στείλτε μας email στο{" "}
+          <a href={contact.emailHref} className="font-bold underline">
+            {contact.email}
+          </a>{" "}
+          ή καλέστε{" "}
           <a href={contact.phoneHref} className="font-bold underline">
             {contact.phone}
           </a>
@@ -25,6 +30,16 @@ export function ContactForm() {
     <form
       onSubmit={(e) => {
         e.preventDefault();
+        const data = new FormData(e.currentTarget);
+        const name = String(data.get("name") || "");
+        const email = String(data.get("email") || "");
+        const phone = String(data.get("phone") || "");
+        const message = String(data.get("message") || "");
+        const subject = encodeURIComponent(`Επικοινωνία από το site — ${name}`);
+        const body = encodeURIComponent(
+          `Ονοματεπώνυμο: ${name}\nEmail: ${email}\nΤηλέφωνο: ${phone}\n\n${message}`
+        );
+        window.location.href = `${contact.emailHref}?subject=${subject}&body=${body}`;
         setSent(true);
       }}
       className="mt-6 space-y-4"
