@@ -62,8 +62,21 @@ export function Footer() {
       </div>
 
       <div className="border-t border-slate-800 py-6 text-center text-xs text-slate-500">
-        © {new Date().getFullYear()} {site.name} — {site.tagline}. Με επιφύλαξη
-        παντός δικαιώματος.
+        <p>
+          © {new Date().getFullYear()} {site.name} — {site.tagline}. Με
+          επιφύλαξη παντός δικαιώματος.
+        </p>
+        <p className="mt-1">
+          Σχεδιασμός &amp; ανάπτυξη από{" "}
+          <a
+            href="https://ekfansis.com"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="font-semibold text-slate-300 hover:text-white"
+          >
+            ekfansis.com
+          </a>
+        </p>
       </div>
     </footer>
   );
