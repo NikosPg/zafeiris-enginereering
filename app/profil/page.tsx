@@ -15,11 +15,26 @@ export default function ProfilePage() {
         subtitle={`${site.ownerName} · ${site.ownerTitle}`}
       />
 
-      <section className="mx-auto max-w-3xl px-4 py-16">
-        <div className="space-y-6 text-lg leading-relaxed text-slate-700">
-          {profile.paragraphs.map((p, i) => (
-            <p key={i}>{p}</p>
-          ))}
+      <section className="mx-auto max-w-4xl px-4 py-16">
+        <div className="grid gap-10 md:grid-cols-[280px_1fr] md:items-start">
+          <figure className="mx-auto w-full max-w-[280px]">
+            {/* eslint-disable-next-line @next/next/no-img-element */}
+            <img
+              src="/images/profile.jpg"
+              alt={site.ownerName}
+              className="w-full rounded-xl border border-slate-200 object-cover shadow-sm"
+            />
+            <figcaption className="mt-3 text-center">
+              <p className="font-bold text-slate-900">{site.ownerName}</p>
+              <p className="text-sm text-slate-500">{site.ownerTitle}</p>
+            </figcaption>
+          </figure>
+
+          <div className="space-y-6 text-lg leading-relaxed text-slate-700">
+            {profile.paragraphs.map((p, i) => (
+              <p key={i}>{p}</p>
+            ))}
+          </div>
         </div>
 
         <div className="mt-14">

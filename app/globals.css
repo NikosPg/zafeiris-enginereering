@@ -1,12 +1,14 @@
 @import "tailwindcss";
 
 @theme {
-  --color-brand-50: #eff6ff;
-  --color-brand-100: #dbeafe;
-  --color-brand-500: #2563eb;
-  --color-brand-600: #1d4ed8;
-  --color-brand-700: #1e40af;
-  --color-brand-900: #172554;
+  /* Παλέτα βασισμένη στο πράσινο του λογοτύπου (#006030) */
+  --color-brand-50: #eef7f1;
+  --color-brand-100: #d2ebdc;
+  --color-brand-200: #a8d8bd;
+  --color-brand-500: #0c8a47;
+  --color-brand-600: #00733b;
+  --color-brand-700: #006030;
+  --color-brand-900: #00341b;
   --font-sans: "Open Sans", ui-sans-serif, system-ui, sans-serif;
 }
 
